@@ -13,9 +13,8 @@ class RestController {
     @GetMapping("/param")
     fun get(request: HttpServletRequest, response: HttpServletResponse, entity: ParameterEntity): String {
         println(entity)
-        // call java class -> fails..
-//        val service = RestService()
-//        service.print()
+        val service = RestService()
+        service.print()
         return "success"
     }
 }
